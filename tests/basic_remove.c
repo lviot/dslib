@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2019
+** LOUIS VIOT, 2019
 ** dslib
 ** File description:
 ** basic_remove.c

@@ -1,3 +1,10 @@
+##
+## LOUIS VIOT, 2020
+## dslib
+## File description:
+## Makefile
+##
+
 NAME	=	libds.a
 T_NAME	=	unit_tests
 
