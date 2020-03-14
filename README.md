@@ -14,28 +14,22 @@ DSlib is a C library, Epitech C coding style compliant and easy to use, to imple
 
 ## Generic doubly linked list basic usage example
 ```c
-void add_2(dnode_t elem)
+void print(dnode_t elem)
 {
-    elem->data = (void *)((unsigned long)elem->data + 2);
+    printf("%d\n", *(int *)elem->data);
 }
 
 int main(void)
 {
     dll_t list = dll_init();                              // list init
     dnode_t fetch = NULL;
+    int n[] = {21, 42, 1};
     
-    list->push_back(list, (void *)21);                    // add node with value 21 at the end
-    list->push_front(list, (void *)42);                   // add node with value 42 at the begining
-    list->insert(list, (void *)1, 1);                     // add node with value 1 at index 1
-    list->for_each(list, &add_2);                         // apply the function add_2 to all nodes
-    fetch = list->get_back(list);                         // get the last node
-    if (fetch == NULL) {
-        return 1;
-    }
-    printf("value: %ld\n", (unsigned long)fetch->data);   // print its value ("last node value: 21")
-    list->pop_at(list, 1);                                // remove node at index 1
-    printf("list size: %ld\n", list->size);               // print list size ("list size: 2")
-    list->clear(list);                                    // free all nodes and list
+    list->push_back(list, &n[0], sizeof(int));           // add node with value 21 at the end
+    list->push_front(list, &n[1], sizeof(int));          // add node with value 42 at the begining
+    list->insert(list, 1, &n[2], sizeof(int));           // add node with value 1 at index 1
+    list->for_each(list, &print);                        // apply the function print to all nodes
+    list->clear(list);                                   // free all nodes and list
     return 0;
 }
 ```
@@ -44,6 +38,6 @@ int main(void)
 
 lines | branches
 ----- | --------
- 95%  |   92%
+ 95%  |   91%
 
 The untested lines/branches are malloc return value check, if you have a clean way to test it with criterion, feel free to make a pull request.
