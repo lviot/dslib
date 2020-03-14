@@ -32,7 +32,7 @@ OBJS	=	$(SRCS:.c=.o)
 T_OBJS	=	$(TESTS:.c=.o)
 
 CFLAGS	=	-Werror -Wextra -Wall
-CFLAGS	+=	-I./headers -g
+CFLAGS	+=	-I./headers
 
 all:	$(NAME)
 
@@ -53,7 +53,7 @@ tests: 	fclean $(TESTS)
 	./$(T_NAME)
 
 coverage:	tests
-	gcovr --exclude tests
+	gcovr --exclude tests --branches
 
 re: fclean all
 
