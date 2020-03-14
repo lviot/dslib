@@ -8,6 +8,8 @@
 #ifndef DSLIB_NODE_H
 #define DSLIB_NODE_H
 
+#include <stddef.h>
+
 struct double_node_s
 {
     void *data;
@@ -17,6 +19,6 @@ struct double_node_s
 
 typedef struct double_node_s *dnode_t;
 
-dnode_t create_dnode(void *);
+dnode_t create_dnode(void *, size_t);
 
 #endif //DSLIB_NODE_H

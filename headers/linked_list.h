@@ -16,9 +16,9 @@ struct dll_s
     dnode_t _head;
     dnode_t _tail;
     size_t size;
-    int (*push_front)(struct dll_s *, void *);
-    int (*push_back)(struct dll_s *, void *);
-    int (*insert)(struct dll_s *, void *, size_t);
+    int (*push_front)(struct dll_s *, void *, size_t);
+    int (*push_back)(struct dll_s *, void *, size_t);
+    int (*insert)(struct dll_s *, size_t, void *, size_t);
     dnode_t (*get_node_at)(struct dll_s *, size_t);
     dnode_t (*get_front)(struct dll_s *);
     dnode_t (*get_back)(struct dll_s *);

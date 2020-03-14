@@ -20,6 +20,7 @@ int dll_free_list(dll_t this)
     while (current) {
         tmp = current;
         current = current->next;
+        free(tmp->data);
         free(tmp);
     }
     free(this);
