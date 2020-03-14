@@ -5,10 +5,10 @@ DSlib is a C library, Epitech C coding style compliant and easy to use, to imple
 ## How to
 ### Compile the lib:
 > make
-### Run unit tests
+### Run unit tests:
 *you **must have** criterion library installed*
 > make tests
-### Run unit tests with coverage
+### Run unit tests with coverage:
 *you **must have** gcovr installed*
 > make coverage
 
