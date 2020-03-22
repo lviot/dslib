@@ -39,3 +39,11 @@ int main(void)
     return 0;
 }
 ```
+
+## Unit tests
+
+lines | branches
+----- | --------
+ 95%  |   92%
+
+The untested lines/branches are malloc return value check, if you have a clean way to test it with criterion, feel free to make a pull request.
