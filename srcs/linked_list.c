@@ -9,13 +9,14 @@
 #include "private.h"
 #include "linked_list.h"
 
-dll_t dll_init(void)
+dll_t dll_init(size_t type_size)
 {
     dll_t list = malloc(sizeof(struct dll_s));
 
     if (list == NULL)
         return NULL;
     list->size = 0;
+    list->type_size = type_size;
     list->_head = NULL;
     list->_tail = NULL;
     list->push_front = &dll_push_front;

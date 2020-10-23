@@ -10,11 +10,11 @@
 
 Test(null_ptr_param, basic)
 {
-    dll_t list = dll_init();
+    dll_t list = dll_init(0);
 
-    cr_assert_eq(list->push_front(NULL, NULL, 0), -1);
-    cr_assert_eq(list->push_back(NULL, NULL, 0), -1);
-    cr_assert_eq(list->insert(NULL, 0, NULL, 0), -1);
+    cr_assert_eq(list->push_front(NULL, NULL), -1);
+    cr_assert_eq(list->push_back(NULL, NULL), -1);
+    cr_assert_eq(list->insert(NULL, 0, NULL), -1);
     cr_assert_eq(list->get_node_at(NULL, 0), NULL);
     cr_assert_eq(list->get_value_at(NULL, 0), NULL);
     cr_assert_eq(list->pop_front(NULL), -1);

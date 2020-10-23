@@ -8,14 +8,14 @@
 #include <stdlib.h>
 #include "linked_list.h"
 
-int dll_push_front(dll_t this, void *data, size_t size)
+int dll_push_front(dll_t this, void *data)
 {
     dnode_t node;
 
     if (this == NULL) {
         return -1;
     }
-    node = create_dnode(data, size);
+    node = create_dnode(data, this->type_size);
     if (node == NULL) {
         return -1;
     }
@@ -32,14 +32,14 @@ int dll_push_front(dll_t this, void *data, size_t size)
     return 0;
 }
 
-int dll_push_back(dll_t this, void *data, size_t size)
+int dll_push_back(dll_t this, void *data)
 {
     dnode_t node;
 
     if (this == NULL) {
         return -1;
     }
-    node = create_dnode(data, size);
+    node = create_dnode(data, this->type_size);
     if (node == NULL) {
         return -1;
     }
@@ -59,7 +59,7 @@ int dll_push_back(dll_t this, void *data, size_t size)
  * 'if' statement at line 67 missing brackets to fit with
  * Epitech C coding style,
  */
-int dll_insert(dll_t this, size_t pos, void *data, size_t size)
+int dll_insert(dll_t this, size_t pos, void *data)
 {
     dnode_t node = NULL;
     dnode_t prev_node = NULL;
@@ -67,9 +67,9 @@ int dll_insert(dll_t this, size_t pos, void *data, size_t size)
     if (this == NULL)
         return -1;
     if (pos == 0) {
-        return dll_push_front(this, data, size);
+        return dll_push_front(this, data);
     }
-    node = create_dnode(data, size);
+    node = create_dnode(data, this->type_size);
     prev_node = this->get_node_at(this, pos - 1);
     if (node == NULL || prev_node == NULL) {
         return -1;

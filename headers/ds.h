@@ -10,6 +10,6 @@
 
 #include "linked_list.h"
 
-dll_t dll_init(void);
+dll_t dll_init(size_t);
 
 #endif //DSLIB_DS_H

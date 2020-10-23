@@ -21,13 +21,13 @@ void print(dnode_t elem)
 
 int main(void)
 {
-    dll_t list = dll_init();                              // list init
+    dll_t list = dll_init(sizeof(int));                  // list init
     dnode_t fetch = NULL;
     int n[] = {21, 42, 1};
     
-    list->push_back(list, &n[0], sizeof(int));           // add node with value 21 at the end
-    list->push_front(list, &n[1], sizeof(int));          // add node with value 42 at the begining
-    list->insert(list, 1, &n[2], sizeof(int));           // add node with value 1 at index 1
+    list->push_back(list, &n[0]);                        // add node with value 21 at the end
+    list->push_front(list, &n[1]);                       // add node with value 42 at the begining
+    list->insert(list, 1, &n[2]);                        // add node with value 1 at index 1
     list->for_each(list, &print);                        // apply the function print to all nodes
     list->clear(list);                                   // free all nodes and list
     return 0;
