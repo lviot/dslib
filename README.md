@@ -1,18 +1,18 @@
-# C Data Structures Library
+# C Data Structures Library 🔗
 DSlib is a C library, Epitech C coding style compliant and easy to use, to implement generics data structures.
 **Memory leak free**. 
 
 ## How to
-### Compile the lib:
+### 🤖 Compile the lib:
 > make
-### Run unit tests:
+### 🛠 Run unit tests:
 *you **must have** criterion library installed*
 > make tests
-### Run unit tests with coverage:
+### 🧪 Run unit tests with coverage:
 *you **must have** gcovr installed*
 > make coverage
 
-## Generic doubly linked list basic usage example
+## 📈 Generic doubly linked list basic usage example
 ```c
 void print(dnode_t elem)
 {
