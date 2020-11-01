@@ -39,5 +39,3 @@ int main(void)
 lines | branches
 ----- | --------
  95%  |   91%
-
-The untested lines/branches are malloc return value check, feel free to make a pull request if you have a clean way to test it with criterion.
